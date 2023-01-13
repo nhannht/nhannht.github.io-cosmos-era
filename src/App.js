@@ -4,7 +4,6 @@ import {Menu} from '@headlessui/react'
 import {useEffect, useState} from "react";
 import Cosmos from "./Components/Cosmos";
 import InfoBoard from "./Components/InfoBoard";
-
 function VerminButton(props) {
     const icon = props.icon;
     const iconStyle = 'url(' + icon + ')';
