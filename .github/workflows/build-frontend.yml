@@ -16,16 +16,14 @@ jobs:
           sudo apt update
           sudo apt install npm
           sudo npm install -g yarn
-      - name: unset CI
-        run: |
-          unset CI
       - name: Install dependencies
         run: |
           yarn install
       - name: Build pages
         run: |
+          unset CI
           yarn build
-          
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
