@@ -19,7 +19,7 @@ jobs:
       - name: unset CI
         run: |
           unset CI
-      - name: Install dependences
+      - name: Install dependencies
         run: |
           yarn install
       - name: Build pages
