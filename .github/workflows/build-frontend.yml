@@ -16,6 +16,9 @@ jobs:
           sudo apt update
           sudo apt install npm
           sudo npm install -g yarn
+      - name: unset CI
+        run: |
+          unset CI
       - name: Install dependences
         run: |
           yarn install
