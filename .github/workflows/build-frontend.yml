@@ -1,0 +1,31 @@
+name: build_frontend
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out
+        uses: actions/checkout@v2
+      - name: Install yarn
+        run: |
+          sudo apt update
+          sudo apt install npm
+          sudo npm install -g yarn
+      - name: Install dependences
+        run: |
+          yarn install
+      - name: Build pages
+        run: |
+          yarn build
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build
+  

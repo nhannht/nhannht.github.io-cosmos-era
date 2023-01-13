@@ -144,7 +144,7 @@ function App() {
 
         />
         <Cosmos
-            planetNum={0}
+            planetNum={10}
             openDialogFunc={setIsDialogPopup}
             dialogDataFunc={setDialogData}
             isDialogPopup={isDialogPopup}
