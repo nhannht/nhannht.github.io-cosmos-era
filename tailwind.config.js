@@ -5,7 +5,10 @@ module.exports = {
         extend: {
            animation: {
                cosmos: ""
-           }
+           },
+            scale:{
+               '40':'0.4',
+            }
         },
     },
     plugins: [],

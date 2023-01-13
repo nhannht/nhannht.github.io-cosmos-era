@@ -68,63 +68,59 @@ function VerminPanel(props) {
     }
 
     return (
-        <div className={"grid grid-rows-1 justify-items-center top-1/4 fixed left-1/2 z-50 "}>
-            <div className="grid
-    {/*grid-rows-2*/}
+        <div className={"flex flex-row h-full  justify-center z-50 content-center"}>
+            <div className={"flex flex-col justify-center "
+                }>
+                <div className="flex flex-col
      bg-purple-500
       opacity-80
-       fixed
         p-5
-        shadow
         z-50
-        after:absolute after:top-5 after:left-0 after:right-0 after:-z-10 after:h-full after:w-full
-        after:bg-gradient-to-l after:from-purple-500 after:to-blue-500 after:blur-lg
-        after:bg-[length:200%-200%] hover:animate-cosmos
-        bg-gradient-to-l from-purple-500
-        after:scale-90 after:translate-y-1 after-[content:'']
         rounded
+
         hover:opacity-100 ">
 
-                <a href={"https://github.com/nhannht"}>
-                    <VerminButton
-                        icon={"/assets/github.png"}
-                        text={"Github"}/>
-                </a>
-                <VerminButton text={"Ukraine"}
-                              icon={"/assets/ukraine-flag.png"}
+                    <a href={"https://github.com/nhannht"}>
+                        <VerminButton
+                            icon={"/assets/github.png"}
+                            text={"Github"}/>
+                    </a>
+                    <VerminButton text={"Ukraine"}
+                                  icon={"/assets/ukraine-flag.png"}
 
-                              onClick={() => {
-                                  const data = ukraine_peace_essays;
-                                  toggleDialog(data);
-                              }}
-                />
-                <a
-                    href={"https://twitter.com/nhanclassroom"}>
-                    <VerminButton
-                        icon={"/assets/Twitter.png"}
-                        text={"Twitter"}/>
-                </a>
-                <VerminButton text={"World"}
-                              onClick={() => {
-                                  const data = not_implemented;
-                                  toggleDialog(data);
-                              }
-                              }
-                />
-                <VerminButton text={"Trophies"}
-                              onClick={() => {
-                                  const data = not_implemented;
-                                  toggleDialog(data);
-                              }
-                              }
-                />
-                <VerminButton text={"Projects"}
-                              onClick={() => {
-                                  const data = not_implemented;
-                                  toggleDialog(data);
-                              }
-                              }
-                />
+                                  onClick={() => {
+                                      const data = ukraine_peace_essays;
+                                      toggleDialog(data);
+                                  }}
+                    />
+                    <a
+                        href={"https://twitter.com/nhanclassroom"}>
+                        <VerminButton
+                            icon={"/assets/Twitter.png"}
+                            text={"Twitter"}/>
+                    </a>
+                    <VerminButton text={"World"}
+                                  onClick={() => {
+                                      const data = not_implemented;
+                                      toggleDialog(data);
+                                  }
+                                  }
+                    />
+                    <VerminButton text={"Treasures"}
+                                  onClick={() => {
+                                      const data = not_implemented;
+                                      toggleDialog(data);
+                                  }
+                                  }
+                    />
+                    <VerminButton text={"Projects"}
+                                  onClick={() => {
+                                      const data = not_implemented;
+                                      toggleDialog(data);
+                                  }
+                                  }
+                    />
+                </div>
             </div>
         </div>
 
@@ -149,7 +145,7 @@ function App() {
 
         />
         <Cosmos
-            planetNum={5}
+            planetNum={0}
             openDialogFunc={setIsDialogPopup}
             dialogDataFunc={setDialogData}
             isDialogPopup={isDialogPopup}
